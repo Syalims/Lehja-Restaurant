@@ -1,0 +1,166 @@
+body {
+    font-family:Georgia, 'Times New Roman', Times, serif ;
+    margin: 0;
+    padding: 0;
+    background-color: #f5f5f5;
+}
+
+header {
+    background-color: #8B4513;
+    color: white;
+    padding: 1em;
+    text-align: center;
+}
+
+.dropdown {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+}
+
+.dropbtn {
+    background-color: transparent;
+    border: none;
+    color: white;
+    font-size: 30px; /* Ukuran font untuk simbol */
+    cursor: pointer;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+    border-radius: 5px;
+    right: 0;
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a:hover {
+    background-color: #ddd;
+}
+
+/* Show dropdown content when hover on the button */
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+h1 {
+    margin: 0;
+}
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 2em;
+    margin: 1em auto;
+    max-width: 1200px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.order-summary, .add-items, .payment-details {
+    flex: 1;
+    margin: 0 1em;
+}
+
+h2 {
+    border-bottom: 2px solid #8B4513;
+    padding-bottom: 0.5em;
+}
+
+#cartDisplay div, #totalPrice {
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+}
+
+#totalPrice {
+    font-weight: bold;
+    margin-top: 20px;
+    text-align: right;
+    border-top: 1px solid #ddd;
+}
+
+.dine-takeaway {
+    margin: 20px 0;
+    text-align: center;
+}
+
+.dine-takeaway label {
+    font-size: 16px;
+    margin-right: 10px;
+}
+
+.dine-takeaway select {
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+/* Button Styles */
+.submit-btn {
+    padding: 10px 20px;
+    font-size: 14px;
+    border: 2px solid #8B4513;
+    border-radius: 5px;
+    background-color: #8B4513;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    display: block;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.submit-btn:hover {
+    background-color: #A0522D;
+    transform: scale(1.05);
+}
+
+.delete-btn, .add-btn {
+    padding: 5px 10px;
+    font-size: 12px;
+    border: 2px solid #A0522D;
+    border-radius: 5px;
+    background-color: #A0522D;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.delete-btn:hover, .add-btn:hover {
+    background-color: #8B4513;
+    transform: scale(1.05);
+}
+header {
+    display: flex;
+    justify-content: space-between; /* Keep this to space out elements */
+    align-items: center;
+    background-color: #8B4513;
+    color: white;
+    padding: 1em;
+}
+
+.header-content {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.dropdown {
+    margin-left: auto; /* Pushes the dropdown to the right */
+}
+
+h1 {
+    margin: 0;
+}

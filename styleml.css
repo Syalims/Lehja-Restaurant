@@ -1,0 +1,135 @@
+body {
+    font-family: Georgia, 'Times New Roman', Times, serif ;
+    margin: 0;
+    padding: 0;
+    background-color: #fff;
+    color: #333;
+}
+
+/* Header styles */
+header {
+    background-color: #8B4513;
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+    position: relative;
+}
+
+.dropdown {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+}
+
+.dropbtn {
+    background-color: transparent;
+    border: none;
+    color: white;
+    font-size: 30px; /* Ukuran font untuk simbol */
+    cursor: pointer;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+    border-radius: 5px;
+    right: 0;
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a:hover {
+    background-color: #ddd;
+}
+
+/* Show dropdown content when hover on the button */
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+/* Menu grid styling */
+.menu-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px; /* Space between items */
+    justify-content: space-around; /* Center items */
+    margin: 0 auto; /* Center the grid */
+}
+
+.menu-item {
+    width: 200px; /* Set a fixed width for all items */
+    height: 300px; /* Set a fixed height for all items */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    background-color: #fff;
+}
+
+.menu-item img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+}
+
+.menu-item p {
+    margin: 10px 0;
+    text-align: center;
+    font-size: 16px;
+}
+
+.add-to-cart-btn {
+    padding: 10px 20px;
+    font-size: 14px;
+    border: 2px solid #8B4513; /* Dark brown border */
+    border-radius: 5px; /* Rounded corners */
+    background-color: #8B4513; /* Dark brown background */
+    color: white; /* White text color */
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease; /* Smooth transition for hover effects */
+}
+
+.add-to-cart-btn:hover {
+    background-color: #A0522D; /* Darker background color on hover */
+    transform: scale(1.05); /* Slightly enlarge on hover */
+}
+
+.checkout-button-container {
+    text-align: center;
+    margin: 20px 0; /* Add spacing around the button */
+}
+
+.checkout-btn {
+    padding: 15px 30px;
+    font-size: 16px;
+    border: 2px solid #8B4513;
+    border-radius: 5px;
+    background-color: #8B4513;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.checkout-btn:hover {
+    background-color: #A0522D;
+    transform: scale(1.05);
+}
+
+footer {
+    background-color: #8B4513;
+    color: white;
+    padding: 10px;
+    text-align: center;
+}

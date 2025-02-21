@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkout</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Order Summary</h1>
+        <div class="dropdown">
+            <button class="dropbtn">&#9776;</button>
+            <div class="dropdown-content">
+                <a href="index.html">Home</a>
+                <a href="about.html">About</a>
+                <a href="menul_local.html">Local food</a>
+                <a href="sidedish.html">Side dish</a>
+                <a href="drink.html">Drink</a>
+                <a href="checkout.html">OrderSummary</a>
+            </div>
+        </div>
+    </header>
+    <main>
+        <div class="container">
+            <div class="order-summary">
+                <h2>Order Summary</h2>
+                <div id="cartDisplay"></div>
+                <div id="totalPrice"></div>
+                <div id="remarksDisplay"></div> <!-- Moved remarks display here -->
+            </div>
+
+            <div class="payment-details">
+                <h2>Payment Details</h2>
+                <div class="dine-takeaway">
+                    <label for="dineTakeaway">Choose an option:</label>
+                    <select id="dineTakeaway">
+                        <option value="dine-in">Dine-in</option>
+                        <option value="takeaway">Takeaway</option>
+                    </select>
+                </div>
+                <button class="submit-btn" type="button" onclick="proceedToPayment()">Submit</button>
+            </div>
+        </div>
+    </main>
+    <section>
+        <h2>Remarks - Sebarang tambahan makanan harga akan berubah kepada RM9.00</h2>
+        <div class="remark-box">
+            <textarea id="remarks" placeholder="Write your remarks here..."></textarea>
+            <button class="submit-btn" onclick="submitRemark()">Submit</button>
+        </div>
+    </section>
+    <script>
+        function submitRemark() {
+            const remark = document.getElementById('remarks').value;
+            if (remark) {
+                // Display remark in remarksDisplay div
+                document.getElementById('remarksDisplay').innerText = `Remark: ${remark}`;
+            } else {
+                alert('Please enter your remarks before submitting.');
+            }
+        }
+
+        function displayCart() {
+            let cart = JSON.parse(localStorage.getItem('cart')) || [];
+            const cartDisplay = document.getElementById("cartDisplay");
+            cartDisplay.innerHTML = ""; // Clear previous cart content
+
+            let total = 0;
+
+            if (cart.length === 0) {
+                cartDisplay.innerHTML = "Your cart is empty.";
+            } else {
+                cart.forEach(function(item, index) {
+                    const itemDiv = document.createElement("div");
+                    itemDiv.innerHTML = `
+                        ${item.name} - RM ${item.price.toFixed(2)}
+                        <button class="delete-btn" onclick="removeFromCart(${index})">Delete</button>
+                        <button class="add-btn" onclick="addSameItem(${index})">Add More</button>
+                    `;
+                    cartDisplay.appendChild(itemDiv);
+                    total += item.price;
+                });
+                document.getElementById("totalPrice").innerHTML = "Total: RM " + total.toFixed(2);
+            }
+
+            // Display saved remark in remarksDisplay div
+            const savedRemark = document.getElementById('remarks').value;
+            if (savedRemark) {
+                document.getElementById('remarksDisplay').innerText = `Remark: ${savedRemark}`;
+            }
+        }
+
+        function removeFromCart(index) {
+            let cart = JSON.parse(localStorage.getItem('cart')) || [];
+            cart.splice(index, 1); // Remove item at the given index
+            localStorage.setItem('cart', JSON.stringify(cart)); // Update local storage
+            displayCart(); // Refresh the cart display
+        }
+
+        function addSameItem(index) {
+            let cart = JSON.parse(localStorage.getItem('cart')) || [];
+            let item = cart[index]; // Get the item to be added again
+            cart.push({ name: item.name, price: item.price }); // Add the same item again
+            localStorage.setItem('cart', JSON.stringify(cart)); // Update local storage
+            displayCart(); // Refresh the cart display
+        }
+
+        function proceedToPayment() {
+            const dineTakeaway = document.getElementById("dineTakeaway").value;
+            alert(`Proceeding with cash payment at counter...\nOption: ${dineTakeaway}`);
+            // Handle cash payment logic here
+        }
+
+        window.onload = displayCart;
+    </script>
+</body>
+</html>
+
+
+
+
+
+

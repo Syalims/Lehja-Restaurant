@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About | Lehja Restaurant</title>
+    <link rel="stylesheet" href="stylea.css">
+</head>
+<body>
+    <header>
+        <h1 class="site-title">ABOUT</h1>
+
+        <div class="dropdown">
+            <button class="dropbtn">&#9776;</button>
+            <div class="dropdown-content">
+                <a href="index.html">Home</a>
+                <a href="about.html">About</a>
+                <a href="menul_local.html">Local food</a>
+                <a href="sidedish.html">Side dish</a>
+                <a href="drink.html">Drink</a>
+                <a href="checkout.html">OrderSummary</a>
+            </div>
+        </div>
+        
+    </header>
+     
+    <br><br><br>
+        <!-- Opening Hours Box -->
+        <div class="opening-hours">
+            <h3>Opening Hours</h3>
+            <br><br><br>
+            <div class="opening-hours-box">
+                <p>Sunday - Thursday: 11:00 AM - 08:30 PM</p>
+                <p>Saturday: 11:00 AM - 08:30 PM</p>
+                <p>Friday: Closed</p>
+            </div>
+        </div>
+
+        <br><br><br>
+
+        <!-- Google Reviews -->
+<div class="google-review">
+    
+        <div class="google-review"> 
+        <h3>Google Reviews</h3> 
+       
+    </div> <div class="review-section"> 
+        <h2>Our Review</h2> <div class="reviews">
+             <div class="review"> <div class="profile-pic" style="background-image: url('profile1.jpg');">
+
+             </div> <p class="name">WADY</p> <p class="comment">Perfect.
+                Food is no problem and delicious!</p> 
+            </div> <div class="review"> <div class="profile-pic" style="background-image: url('profile2.jpg');">
+
+            </div> <p class="name">Arif GUERILLA</p> <p class="comment">Fried noodles are delicious, large portions. Reasonable price with food</p> 
+        </div> <div class="review"> <div class="profile-pic" style="background-image: url('profile3.jpg');">
+
+        </div> <p class="name">Saifullizan Abdullah</p> <p class="comment">Highly recommended for mee goreng lovers.</p> 
+    </div> </div> <div class="leave-comment">
+        <textarea placeholder="LEAVE YOUR COMMENT..." id="userComment"></textarea>
+        <button class="submit-btn" onclick="redirectToGoogleReview()">Submit</button>
+    </div>
+    <script>
+        function redirectToGoogleReview() {
+            let userComment = document.getElementById('userComment').value;
+            if (userComment) {
+                alert('Thank you for your feedback! You will now be redirected to Google Reviews.');
+                window.open('https://maps.app.goo.gl/qYbicMgP83vV5crv6', '_blank');
+            } else {
+                alert('Please enter your comment before submitting.');
+            }
+        }
+    </script>
+    
+    </main>
+        
+    
+    <p>
+        Read our customer reviews! 
+        <a href="https://maps.app.goo.gl/qYbicMgP83vV5crv6" target="_blank" rel="noopener noreferrer">
+            Click here to read reviews on Google.
+        </a>
+    </p>
+</div>
+
+
+        <!-- Contact Us Section -->
+        <div class="contact-info">
+            <h3>Contact Us</h3>
+            <div class="contact-box">
+                <p>If you have any questions or would like to make a reservation or catering, feel free to contact us!</p>
+                <p><strong>Phone:</strong> 0174023239</p>
+                <p><strong>Email:</strong> <a href="firdauspodolski46@gmail.com">firdauspodolski46@gmail.com</a></p>
+                <p><strong>Tiktok:</strong> <a href="https://www.tiktok.com/@kedaimakanlehjahajiseman?_t=ZS-8stNUN2BORr&_r=1">https://www.tiktok.com/@kedaimakanlehjahajiseman?_t=ZS-8stNUN2BORr&_r=1</p>
+            </div>
+        </div>
+    </section>
+    <br><br><br>
+
+
+    <footer>
+        <p>&copy; 2025 Lehja Restaurant | All rights reserved</p>
+    </footer>
+</body>
+</html>
+   

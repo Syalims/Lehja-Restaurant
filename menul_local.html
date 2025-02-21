@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu Page</title>
+    <link rel="stylesheet" href="styleml.css">
+</head>
+<body>
+    <header>
+        <h1>LOCAL FOOD</h1>
+        <div class="dropdown">
+            <button class="dropbtn">&#9776;</button>
+            <div class="dropdown-content">
+                <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="menul_local.html">Local food</a>
+        <a href="sidedish.html">Side dish</a>
+        <a href="drink.html">Drink</a>
+        <a href="checkout.html">OrderSummary</a>
+            </div>
+        </div>
+    </header>
+    <br><br><br><br><br>
+    <section>
+        <h2></h2>
+        <div class="menu-grid">
+            <div class="menu-item">
+                <img src="local food/mee.jpeg" alt="MEE">
+                <p>MEE - RM 7.50</p>
+                <button class="add-to-cart-btn" onclick="addToCart('MEE', 7.50)">Add to Cart</button>
+            </div>
+            <div class="menu-item">
+                <img src="local food/koew teow.jpeg" alt="Koew Teow">
+                <p>KOEW TEOW - RM 7.50</p>
+                <button class="add-to-cart-btn" onclick="addToCart('KOEW TEOW', 7.50)">Add to Cart</button>
+            </div>
+            <div class="menu-item">
+                <img src="local food/maggi.jpeg" alt="Maggie">
+                <p>MAGGIE - RM 7.50</p>
+                <button class="add-to-cart-btn" onclick="addToCart('MAGGIE', 7.50)">Add to Cart</button>
+            </div>
+            <div class="menu-item">
+                <img src="local food/bihun.jpeg" alt="Bihun">
+                <p>BIHUN - RM 7.50</p>
+                <button class="add-to-cart-btn" onclick="addToCart('BIHUN', 7.50)">Add to Cart</button>
+            </div>
+        </div>
+    </section>
+    
+    <br><br><br><br><br>
+    
+    <section>
+        <h2>SUP / KUAH</h2>
+        <div class="menu-grid">
+            <div class="menu-item">
+                <img src="local food/MEE KUAH.jpeg" alt="MEE">
+                <p>MEE KUAH - RM 7.50</p>
+                <button class="add-to-cart-btn" onclick="addToCart('MEE KUAH', 7.50)">Add to Cart</button>
+            </div>
+            <div class="menu-item">
+                <img src="local food/'Kuey teow thng' fans rejoice! Your favourite Shoon Lee Kuey Teow Soup and State Kuey Teow Thng are near each other in PJ Old Town.jpg"   alt="Koey Teow Sup">
+                <p>KOEW TEOW SUP - RM 7.50</p>
+                <button class="add-to-cart-btn" onclick="addToCart('KOEW TEOW SUP', 7.50)">Add to Cart</button>
+            </div>
+            <div class="menu-item">
+                <img src="local food/MAGGI SUP.jpeg" alt="Maggie">
+                <p>MAGGIE SUP - RM 7.50</p>
+                <button class="add-to-cart-btn" onclick="addToCart('MAGGIE SUP', 7.50)">Add to Cart</button>
+            </div>
+            <div class="menu-item">
+                <img src="local food/Bihun sup daging.jpg" alt="Bihun">
+                <p>BIHUN SUP - RM 7.50</p>
+                <button class="add-to-cart-btn" onclick="addToCart('BIHUN SUP', 7.50)">Add to Cart</button>
+            </div>
+        </div>
+    </section>
+    
+    <br><br><br><br><br>
+    
+    <section>
+        <h2>Add-Ons</h2>
+        <div class="menu-grid">
+            <div class="menu-item">
+                <img src="local food/TELUR MATA.jpeg" alt="Telur Mata">
+                <p>TELUR MATA - RM 1.00</p>
+                <button class="add-to-cart-btn" onclick="addToCart('TELUR MATA', 1.00)">Add to Cart</button>
+            </div>
+            <div class="menu-item">
+                <img src="local food/TELUR DADAR.jpeg" alt="Telur Dadar">
+                <p>TELUR DADAR - RM 2.00</p>
+                <button class="add-to-cart-btn" onclick="addToCart('TELUR DADAR', 2.00)">Add to Cart</button>
+            </div>
+        </div>
+    </section>
+
+    <br><br><br><br><br>
+
+    <div class="checkout-button-container">
+        <button class="checkout-btn" onclick="goToCheckout()">Proceed to Checkout</button>
+    </div> <!-- Checkout button placed at the bottom -->
+    
+    <script>
+        function addToCart(itemName, itemPrice) {
+            let cart = JSON.parse(localStorage.getItem('cart')) || [];
+            cart.push({ name: itemName, price: itemPrice });
+            localStorage.setItem('cart', JSON.stringify(cart));
+            alert(`${itemName} has been added to your cart.`);
+        }
+
+        function goToCheckout() {
+            window.location.href = 'checkout.html';
+        }
+    </script>
+    
+    <footer>
+        <p>&copy; 2025 Lehja Restaurant | All rights reserved</p>
+    </footer>
+</body>
+</html>
+
+
+

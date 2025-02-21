@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu Page</title>
+    <link rel="stylesheet" href="drnk.css">
+</head>
+<body>
+    <header>
+        <h1>DRINK</h1>
+        <div class="dropdown">
+            <button class="dropbtn">&#9776;</button>
+            <div class="dropdown-content">
+                <a href="index.html">Home</a>
+                <a href="about.html">About</a>
+                <a href="menul_local.html">Local Food</a>
+                <a href="sidedish.html">Side Dish</a>
+                <a href="drink.html">Drink</a>
+                <a href="checkout.html">Order Summary</a>
+            </div>
+        </div>
+    </header>
+    <br><br><br><br><br>
+    <section>
+        <h2>Minuman</h2>
+        <div class="menu-grid">
+            <div class="menu-item">
+                <p>TEA / KOPI</p>
+                <label>
+                    Pilih Cara Hidangan:
+                    <select id="drinkType1" onchange="updatePrice('drinkType1', 'price1', 2.00)">
+                        <option value="2.00">Gelas Panas (RM 2.00)</option>
+                        <option value="2.50">Gelas Sejuk (RM 2.50)</option>
+                        <option value="2.50">Bungkus Panas (RM 2.50)</option>
+                        <option value="2.80">Bungkus Sejuk (RM 2.80)</option>
+                    </select>
+                </label>
+                <button class="add-to-cart-btn" onclick="addToCart('TEA / KOPI', 2.00, 'drinkType1')">Add to Cart</button>
+            </div>
+            <div class="menu-item">
+                <p>KOPI O / TEA O </p>
+                <label>
+                    Pilih Cara Hidangan:
+                    <select id="drinkType2" onchange="updatePrice('drinkType2', 'price2', 1.80)">
+                        <option value="1.80">Gelas Panas (RM 1.80)</option>
+                        <option value="2.00">Gelas Sejuk (RM 2.00)</option>
+                        <option value="2.00">Bungkus Panas (RM 2.00)</option>
+                        <option value="2.20">Bungkus Sejuk (RM 2.20)</option>
+                    </select>
+                </label>
+                <button class="add-to-cart-btn" onclick="addToCart('KOPI O / TEA O', 1.80, 'drinkType2')">Add to Cart</button>
+            </div>
+            <div class="menu-item">
+                <p>TEA O LIMAU </p>
+                <label>
+                    Pilih Cara Hidangan:
+                    <select id="drinkType2" onchange="updatePrice('drinkType2', 'price2', 1.80)">
+                        <option value="1.80">Gelas Panas (RM 1.80)</option>
+                        <option value="2.20">Gelas Sejuk (RM 2.20)</option>
+                        <option value="2.00">Bungkus Panas (RM 2.00)</option>
+                        <option value="2.40">Bungkus Sejuk (RM 2.40)</option>
+                    </select>
+                </label>
+                <button class="add-to-cart-btn" onclick="addToCart('TEA O LIMAU', 1.80, 'drinkType2')">Add to Cart</button>
+            </div>
+            <div class="menu-item">
+                <p>TEA O LEMON </p>
+                <label>
+                    Pilih Cara Hidangan:
+                    <select id="drinkType2" onchange="updatePrice('drinkType2', 'price2', 2.00)">
+                        <option value="2.00">Gelas Panas (RM 2.00)</option>
+                        <option value="2.40">Gelas Sejuk (RM 2.40)</option>
+                        <option value="2.20">Bungkus Panas (RM 2.20)</option>
+                        <option value="2.60">Bungkus Sejuk (RM 2.60)</option>
+                    </select>
+                </label>
+                <button class="add-to-cart-btn" onclick="addToCart('TEA O LEMON', 2.00, 'drinkType2')">Add to Cart</button>
+            </div>
+            <div class="menu-item">
+                <p>TEA O LAICI </p>
+                <label>
+                    Pilih Cara Hidangan:
+                    <select id="drinkType2" onchange="updatePrice('drinkType2', 'price2', 2.00)">
+                        <option value="2.00">Gelas Panas (RM 2.00)</option>
+                        <option value="2.50">Gelas Sejuk (RM 2.50)</option>
+                        <option value="2.20">Bungkus Panas (RM 2.20)</option>
+                        <option value="2.70">Bungkus Sejuk (RM 2.70)</option>
+                    </select>
+                </label>
+                <button class="add-to-cart-btn" onclick="addToCart('TEA O LAICI', 2.00, 'drinkType2')">Add to Cart</button>
+            </div>
+            <div class="menu-item">
+                <p>LAICI </p>
+                <label>
+                    Pilih Cara Hidangan:
+                    <select id="drinkType2" onchange="updatePrice('drinkType2', 'price2', 1.80)">
+                        <option value="1.80">Gelas Panas (RM 1.80)</option>
+                        <option value="2.00">Gelas Sejuk (RM 2.00)</option>
+                        <option value="2.20">Bungkus Panas (RM 2.20)</option>
+                        <option value="2.20">Bungkus Sejuk (RM 2.20)</option>
+                    </select>
+                </label>
+                <button class="add-to-cart-btn" onclick="addToCart('LAICI', 1.80, 'drinkType2')">Add to Cart</button>
+            </div>
+            <div class="menu-item">
+                <p>BARLI MADU </p>
+                <label>
+                    Pilih Cara Hidangan:
+                    <select id="drinkType2" onchange="updatePrice('drinkType2', 'price2', 1.80)">
+                        <option value="1.80">Gelas Panas (RM 1.80)</option>
+                        <option value="2.00">Gelas Sejuk (RM 2.00)</option>
+                        <option value="2.00">Bungkus Panas (RM 2.00)</option>
+                        <option value="2.20">Bungkus Sejuk (RM 2.20)</option>
+                    </select>
+                </label>
+                <button class="add-to-cart-btn" onclick="addToCart('BARLI MADU', 1.80, 'drinkType2')">Add to Cart</button>
+            </div>
+            <div class="menu-item">
+                <p>MILO O </p>
+                <label>
+                    Pilih Cara Hidangan:
+                    <select id="drinkType2" onchange="updatePrice('drinkType2', 'price2', 2.60)">
+                        <option value="2.60">Gelas Panas (RM 2.60)</option>
+                        <option value="2.80">Gelas Sejuk (RM 2.80)</option>
+                        <option value="2.80">Bungkus Panas (RM 2.80)</option>
+                        <option value="3.00">Bungkus Sejuk (RM 3.00)</option>
+                    </select>
+                </label>
+                <button class="add-to-cart-btn" onclick="addToCart('MILO O', 2.60, 'drinkType2')">Add to Cart</button>
+            </div>
+            <div class="menu-item">
+                <p>MILO </p>
+                <label>
+                    Pilih Cara Hidangan:
+                    <select id="drinkType2" onchange="updatePrice('drinkType2', 'price2', 2.80)">
+                        <option value="2.80">Gelas Panas (RM 2.80)</option>
+                        <option value="3.00">Gelas Sejuk (RM 3.00)</option>
+                        <option value="3.00">Bungkus Panas (RM 3.00)</option>
+                        <option value="3.20">Bungkus Sejuk (RM 3.20)</option>
+                    </select>
+                </label>
+                <button class="add-to-cart-btn" onclick="addToCart('MILO', 2.80, 'drinkType2')">Add to Cart</button>
+            </div>
+            <div class="menu-item">
+                <p>LIMAU </p>
+                <label>
+                    Pilih Cara Hidangan:
+                    <select id="drinkType2" onchange="updatePrice('drinkType2', 'price2', 1.60)">
+                        <option value="1.60">Gelas Panas (RM 1.60)</option>
+                        <option value="1.80">Gelas Sejuk (RM 1.80)</option>
+                        <option value="1.80">Bungkus Panas (RM 1.80)</option>
+                        <option value="2.00">Bungkus Sejuk (RM 2.00)</option>
+                    </select>
+                </label>
+                <button class="add-to-cart-btn" onclick="addToCart('LIMAU', 1.60, 'drinkType2')">Add to Cart</button>
+            </div>
+            <div class="menu-item">
+                <p>OREN </p>
+                <label>
+                    Pilih Cara Hidangan:
+                    <select id="drinkType2" onchange="updatePrice('drinkType2', 'price2', 1.70)">
+                        <option value="1.70">Gelas Panas (RM 1.70)</option>
+                        <option value="2.00">Gelas Sejuk (RM 2.00)</option>
+                        <option value="1.90">Bungkus Panas (RM 1.90)</option>
+                        <option value="2.20">Bungkus Sejuk (RM 2.20)</option>
+                    </select>
+                </label>
+                <button class="add-to-cart-btn" onclick="addToCart('OREN', 1.70, 'drinkType2')">Add to Cart</button>
+            </div>
+            <div class="menu-item">
+                <p>JAGUNG </p>
+                <label>
+                    Pilih Cara Hidangan:
+                    <select id="drinkType2" onchange="updatePrice('drinkType2', 'price2', 2.00)">
+                        <option value="2.00">Gelas Panas (RM 3.00)</option>
+                        <option value="2.20">Gelas Sejuk (RM 3.50)</option>
+                        <option value="2.20">Bungkus Panas (RM 3.00)</option>
+                        <option value="2.40">Bungkus Sejuk (RM 3.50)</option>
+                    </select>
+                </label>
+                <button class="add-to-cart-btn" onclick="addToCart('JAGUNG', 2.40, 'drinkType2')">Add to Cart</button>
+            </div>
+            <div class="menu-item">
+                <p>LEMON </p>
+                <label>
+                    Pilih Cara Hidangan:
+                    <select id="drinkType2" onchange="updatePrice('drinkType2', 'price2', 1.80)">
+                        <option value="1.80">Gelas Panas (RM 3.00)</option>
+                        <option value="2.00">Gelas Sejuk (RM 3.50)</option>
+                        <option value="2.00">Bungkus Panas (RM 3.00)</option>
+                        <option value="2.20">Bungkus Sejuk (RM 3.50)</option>
+                    </select>
+                </label>
+                <button class="add-to-cart-btn" onclick="addToCart('LEMON', 1.80, 'drinkType2')">Add to Cart</button>
+            </div>
+            <div class="menu-item">
+                <p>SIRAP </p>
+                <label>
+                    Pilih Cara Hidangan:
+                    <select id="drinkType2" onchange="updatePrice('drinkType2', 'price2', 1.60)">
+                        <option value="1.60">Gelas Panas (RM 1.60)</option>
+                        <option value="1.70">Gelas Sejuk (RM 1.70)</option>
+                        <option value="1.70">Bungkus Panas (RM 1.70)</option>
+                        <option value="1.90">Bungkus Sejuk (RM 1.90)</option>
+                    </select>
+                </label>
+                <button class="add-to-cart-btn" onclick="addToCart('SIRAP', 1.60, 'drinkType2')">Add to Cart</button>
+            </div>
+            <div class="menu-item">
+                <p>NESCAFE </p>
+                <label>
+                    Pilih Cara Hidangan:
+                    <select id="drinkType2" onchange="updatePrice('drinkType2', 'price2', 3.00)">
+                        <option value="3.00">Gelas Panas (RM 3.00)</option>
+                        <option value="3.50">Gelas Sejuk (RM 3.50)</option>
+                        <option value="3.20">Bungkus Panas (RM 3.20)</option>
+                        <option value="3.40">Bungkus Sejuk (RM 3.40)</option>
+                    </select>
+                </label>
+                <button class="add-to-cart-btn" onclick="addToCart('NESCAFE', 3.00, 'drinkType2')">Add to Cart</button>
+            </div>
+            <div class="menu-item">
+                <p>NESCAFE O </p>
+                <label>
+                    Pilih Cara Hidangan:
+                    <select id="drinkType2" onchange="updatePrice('drinkType2', 'price2', 2.80)">
+                        <option value="2.80">Gelas Panas (RM 2.80)</option>
+                        <option value="3.50">Gelas Sejuk (RM 3.50)</option>
+                        <option value="3.00">Bungkus Panas (RM 3.00)</option>
+                        <option value="3.20">Bungkus Sejuk (RM 3.20)</option>
+                    </select>
+                </label>
+                <button class="add-to-cart-btn" onclick="addToCart('NESCAFE O', 2.80, 'drinkType2')">Add to Cart</button>
+            </div>
+            <div class="menu-item">
+                <p>ASAM </p>
+                <label>
+                    Pilih Cara Hidangan:
+                    <select id="drinkType2" onchange="updatePrice('drinkType2', 'price2', 1.80)">
+                        <option value="1.80">Gelas Panas (RM 1.80)</option>
+                        <option value="2.00">Gelas Sejuk (RM 2.00)</option>
+                        <option value="2.00">Bungkus Panas (RM 2.00)</option>
+                        <option value="2.20">Bungkus Sejuk (RM 2.20)</option>
+                    </select>
+                </label>
+                <button class="add-to-cart-btn" onclick="addToCart('ASAM', 1.80, 'drinkType2')">Add to Cart</button>
+            </div>
+            <div class="menu-item">
+                <p>HALIA O </p>
+                <label>
+                    Pilih Cara Hidangan:
+                    <select id="drinkType2" onchange="updatePrice('drinkType2', 'price2', 1.60)">
+                        <option value="1.60">Gelas Panas (RM 1.60)</option>
+                        <option value="1.80">Gelas Sejuk (RM1.80)</option>
+                        <option value="1.80">Bungkus Panas (RM 1.80)</option>
+                        <option value="2.00">Bungkus Sejuk (RM 2.00)</option>
+                    </select>
+                </label>
+                <button class="add-to-cart-btn" onclick="addToCart('HALIA O', 1.60, 'drinkType2')">Add to Cart</button>
+            </div>
+            <div class="menu-item">
+                <p>HALIA </p>
+                <label>
+                    Pilih Cara Hidangan:
+                    <select id="drinkType2" onchange="updatePrice('drinkType2', 'price2', 1.80)">
+                        <option value="1.80">Gelas Panas (RM1.80)</option>
+                        <option value="2.00">Gelas Sejuk (RM 2.00)</option>
+                        <option value="2.00">Bungkus Panas (RM 2.00)</option>
+                        <option value="2.20">Bungkus Sejuk (RM 2.20)</option>
+                    </select>
+                </label>
+                <button class="add-to-cart-btn" onclick="addToCart('HALIA', 1.80, 'drinkType2')">Add to Cart</button>
+            </div>
+            <div class="menu-item">
+                <p>HORLICK </p>
+                <label>
+                    Pilih Cara Hidangan:
+                    <select id="drinkType2" onchange="updatePrice('drinkType2', 'price2', 3.00)">
+                        <option value="3.00">Gelas Panas (RM 3.00)</option>
+                        <option value="3.20">Gelas Sejuk (RM 3.20)</option>
+                        <option value="3.20">Bungkus Panas (RM 3.20)</option>
+                        <option value="3.40">Bungkus Sejuk (RM 3.40)</option>
+                    </select>
+                </label>
+                <button class="add-to-cart-btn" onclick="addToCart('HORLICK', 3.00, 'drinkType2')">Add to Cart</button>
+            </div>
+            <div class="menu-item">
+                <p>HORLICK O </p>
+                <label>
+                    Pilih Cara Hidangan:
+                    <select id="drinkType2" onchange="updatePrice('drinkType2', 'price2', 2.80)">
+                        <option value="2.80">Gelas Panas (RM 2.80)</option>
+                        <option value="3.00">Gelas Sejuk (RM 3.00)</option>
+                        <option value="3.00">Bungkus Panas (RM 3.00)</option>
+                        <option value="3.20">Bungkus Sejuk (RM 3.20)</option>
+                    </select>
+                </label>
+                <button class="add-to-cart-btn" onclick="addToCart('HORLICK O', 2.80, 'drinkType2')">Add to Cart</button>
+            </div>
+            <div class="menu-item">
+                <p>NESLO </p>
+                <label>
+                    Pilih Cara Hidangan:
+                    <select id="drinkType2" onchange="updatePrice('drinkType2', 'price2', 3.20)">
+                        <option value="3.20">Gelas Panas (RM 3.20)</option>
+                        <option value="3.50">Gelas Sejuk (RM 3.50)</option>
+                        <option value="3.40">Bungkus Panas (RM 3.40)</option>
+                        <option value="3.70">Bungkus Sejuk (RM 3.70)</option>
+                    </select>
+                </label>
+                <button class="add-to-cart-btn" onclick="addToCart('NESLO', 3.20, 'drinkType2')">Add to Cart</button>
+            </div>
+            <div class="menu-item">
+                <p>NESLO O </p>
+                <label>
+                    Pilih Cara Hidangan:
+                    <select id="drinkType2" onchange="updatePrice('drinkType2', 'price2', 3.00)">
+                        <option value="3.00">Gelas Panas (RM 3.00)</option>
+                        <option value="3.30">Gelas Sejuk (RM 3.30)</option>
+                        <option value="3.20">Bungkus Panas (RM 3.20)</option>
+                        <option value="3.50">Bungkus Sejuk (RM 3.50)</option>
+                    </select>
+                </label>
+                <button class="add-to-cart-btn" onclick="addToCart('NESLO O', 3.00, 'drinkType2')">Add to Cart</button>
+            </div>
+            <div class="menu-item">
+                <p>LIMAU ASAM BOI</p>
+                <label>
+                    Pilih Cara Hidangan:
+                    <select id="drinkType2" onchange="updatePrice('drinkType2', 'price2', 2.00)">
+                        <option value="2.00">Gelas Panas (RM 2.00)</option>
+                        <option value="2.20">Gelas Sejuk (RM 2.20)</option>
+                        <option value="2.20">Bungkus Panas (RM 2.20)</option>
+                        <option value="2.40">Bungkus Sejuk (RM 2.40)</option>
+                    </select>
+                </label>
+                <button class="add-to-cart-btn" onclick="addToCart('LIMAU ASAM BOI', 2.00, 'drinkType2')">Add to Cart</button>
+            </div>
+            <div class="menu-item">
+                <p>AIR PAKET </p>
+                <label>
+                    Pilih Cara Hidangan:
+                    <select id="drinkType2" onchange="updatePrice('drinkType2', 'price2', 2.60)">
+                        <option value="2.60">Gelas Panas (RM 2.60)</option>
+                        <option value="2.80">Gelas Sejuk (RM 2.80)</option>
+                        <option value="2.80">Bungkus Panas (RM 2.80)</option>
+                        <option value="3.00">Bungkus Sejuk (RM 3.00)</option>
+                    </select>
+                </label>
+                <button class="add-to-cart-btn" onclick="addToCart('AIR PAKET', 2.60, 'drinkType2')">Add to Cart</button>
+            </div>
+            <div class="menu-item">
+                <p>AIR PAKET  O </p>
+                <label>
+                    Pilih Cara Hidangan:
+                    <select id="drinkType2" onchange="updatePrice('drinkType2', 'price2', 2.40)">
+                        <option value="2.40">Gelas Panas (RM 2.40)</option>
+                        <option value="2.60">Gelas Sejuk (RM 2.60)</option>
+                        <option value="2.60">Bungkus Panas (RM 2.60)</option>
+                        <option value="2.80">Bungkus Sejuk (RM 2.80)</option>
+                    </select>
+                </label>
+                <button class="add-to-cart-btn" onclick="addToCart('AIR PAKET O', 2.40, 'drinkType2')">Add to Cart</button>
+            </div>
+            <div class="menu-item">
+                <p>AIR PAKET KOSONG </p>
+                <label>
+                    Pilih Cara Hidangan:
+                    <select id="drinkType2" onchange="updatePrice('drinkType2', 'price2', 2.40)">
+                        <option value="2.40">Gelas Panas (RM 2.40)</option>
+                        <option value="2.60">Gelas Sejuk (RM 2.60)</option>
+                        <option value="2.60">Bungkus Panas (RM 2.60)</option>
+                        <option value="2.80">Bungkus Sejuk (RM 2.80)</option>
+                    </select>
+                </label>
+                <button class="add-to-cart-btn" onclick="addToCart('AIR PAKET KOSONG', 2.40, 'drinkType2')">Add to Cart</button>
+            </div>
+            <div class="menu-item">
+                <p>EXTRA JOSS </p>
+                <label>
+                    Pilih Cara Hidangan:
+                    <select id="drinkType2" onchange="updatePrice('drinkType2', 'price2', 2.20)">
+                        <option value="2.20">Gelas Panas (RM 2.20)</option>
+                        <option value="3.00">Gelas Sejuk (RM 3.00)</option>
+                        <option value="2.40">Bungkus Panas (RM 2.40)</option>
+                        <option value="3.20">Bungkus Sejuk (RM 3.20)</option>
+                    </select>
+                </label>
+                <button class="add-to-cart-btn" onclick="addToCart('EXTRA JOSS', 2.20, 'drinkType2')">Add to Cart</button>
+            </div>
+            <div class="menu-item">
+                <p>GREEN TEA </p>
+                <label>
+                    Pilih Cara Hidangan:
+                    <select id="drinkType2" onchange="updatePrice('drinkType2', 'price2', 2.20)">
+                        <option value="2.20">Gelas Panas (RM 2.20)</option>
+                        <option value="2.80">Gelas Sejuk (RM 2.80)</option>
+                        <option value="2.80">Bungkus Panas (RM 2.80)</option>
+                        <option value="3.00">Bungkus Sejuk (RM 3.00)</option>
+                    </select>
+                </label>
+                <button class="add-to-cart-btn" onclick="addToCart('GREEN TEA', 2.20, 'drinkType2')">Add to Cart</button>
+            </div>
+            <div class="menu-item">
+                <p>KELADI</p>
+                <label>
+                    Pilih Cara Hidangan:
+                    <select id="drinkType2" onchange="updatePrice('drinkType2', 'price2', 2.20)">
+                        <option value="2.20">Gelas Panas (RM 2.20)</option>
+                        <option value="2.50">Gelas Sejuk (RM 2.50)</option>
+                        <option value="2.50">Bungkus Panas (RM 2.50)</option>
+                        <option value="2.80">Bungkus Sejuk (RM 2.80)</option>
+                    </select>
+                </label>
+                <button class="add-to-cart-btn" onclick="addToCart('KELADI', 2.20, 'drinkType2')">Add to Cart</button>
+            </div>
+
+    </section>
+
+    <br><br><br><br><br>
+
+    <div class="checkout-button-container">
+        <button class="checkout-btn" onclick="goToCheckout()">Proceed to Checkout</button>
+    </div> <!-- Checkout button placed at the bottom -->
+    
+    <script>
+        function addToCart(itemName, itemPrice) {
+            let cart = JSON.parse(localStorage.getItem('cart')) || [];
+            cart.push({ name: itemName, price: itemPrice });
+            localStorage.setItem('cart', JSON.stringify(cart));
+            alert(`${itemName} has been added to your cart.`);
+        }
+
+        function goToCheckout() {
+            window.location.href = 'checkout.html';
+        }
+    </script>
+    <footer>
+        <p>&copy; 2025 Lehja Restaurant | All rights reserved</p>
+    </footer>
+</body>
+</html>
